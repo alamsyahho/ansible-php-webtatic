@@ -11,5 +11,6 @@
   yum:
     name: "{{ item }}"
     state: present
+    enablerepo: webtatic-testing
   with_items:
     - "{{ php_packages }}"

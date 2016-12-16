@@ -60,6 +60,5 @@ script:
   # Ensure PHP is installed and at the right version.
   #- 'docker exec --tty "$(cat ${container_id})" env TERM=xterm which php'
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm test -x /usr/bin/php'
-
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm php --version'
   - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm /usr/bin/php --version | grep -qF "PHP ${php_version}"'

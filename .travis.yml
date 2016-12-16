@@ -4,17 +4,17 @@ services: docker
 env:
   # Test package install on all supported OSes.
   - distro: centos6
-    init: /usr/lib/systemd/systemd
+    init: /sbin/init
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
     playbook: test-php56.yml
     php_version: 5.6
   - distro: centos6
-    init: /usr/lib/systemd/systemd
+    init: /sbin/init
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
     playbook: test-php70.yml
     php_version: 7.0
   - distro: centos6
-    init: /usr/lib/systemd/systemd
+    init: /sbin/init
     run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
     playbook: test-php71.yml
     php_version: 7.1

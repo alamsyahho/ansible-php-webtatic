@@ -3,5 +3,5 @@ __epel_repo: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.
 __webtatic_repo: https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
 __php_fpm_pool_conf_path: "/etc/php-fpm.d/www.conf"
-__php_fpm_pool_user: nginx
-__php_fpm_pool_group: nginx
+__php_fpm_pool_user: apache
+__php_fpm_pool_group: apache

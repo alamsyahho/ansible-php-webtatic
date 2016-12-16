@@ -1,0 +1,31 @@
+---
+- name: include os specific variables
+  include_vars: "{{ ansible_os_family }}-{{ ansible_distribution_major_version }}.yml"
+
+- name: include php specific variables
+  include_vars: "{{ php_version }}.yml"
+
+- name: define php packages
+  set_fact:
+    php_packages: "{{ __php_packages | list }}"
+
+- name: define repo url for epel and webtatic
+  set_fact:
+    epel_repo: "{{ __epel_repo }}"
+    webtatic_repo: "{{ __webtatic_repo }}"
+
+# setup and install tasks
+- include: setup-redhat-6.yml
+  when:
+    - ansible_os_family == 'RedHat'
+    - ansible_distribution_major_version == '6'
+  static: false
+
+- include: setup-redhat-7.yml
+  when:
+    - ansible_os_family == 'RedHat'
+    - ansible_distribution_major_version == '7'
+  static: false
+
+# configure tasks
+- include: configure.yml

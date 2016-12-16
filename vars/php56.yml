@@ -1,0 +1,25 @@
+---
+__php_packages:
+  - httpd
+  - mod_ssl
+  - php56w
+  - php56w-bcmath
+  - php56w-mcrypt
+  - php56w-tidy
+  - php56w-mysql
+  - php56w-gd
+  - php56w-pecl-geoip
+  - php56w-imap
+  - php56w-mbstring
+  - php56w-odbc
+  - php56w-pear
+  - php56w-intl
+  - php56w-soap
+  - php56w-xml
+  - php56w-xmlrpc
+  - php56w-pecl-apcu
+  - php56w-pecl-igbinary
+  - php56w-pecl-imagick
+  - php56w-pecl-memcache
+  - php56w-pecl-memcached
+  - php56w-fpm

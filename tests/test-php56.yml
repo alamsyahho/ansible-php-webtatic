@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars:
+    php_version: php56
+
+  roles:
+    - role_under_test

@@ -1,0 +1,7 @@
+.directory
+.vagrant
+*.retry
+start.sh
+uwsgi.ini
+Vagrantfile
+temp/

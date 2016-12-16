@@ -1,0 +1,28 @@
+---
+- name: install epel and webtatic repositories
+  yum:
+    name: "{{ item.name }}"
+    state: present
+  with_items:
+    - name: "{{ epel_repo }}"
+    - name: "{{ webtatic_repo }}"
+
+- name: install php-fpm and deps
+  yum:
+    name: "{{ item }}"
+    state: present
+    enablerepo: webtatic-testing
+  with_items:
+    - "{{ php_packages }}"
+
+- name: check memcached module
+  shell: php -m | grep -i memcached
+  register: memcached_exist
+  changed_when: false
+  failed_when: false
+  no_log: true
+
+- include: memcached-php7.yml
+  static: false
+  when:
+    - memcached_exist.rc == 1

@@ -1,0 +1,3 @@
+---
+# php version. currently only support: php56, php70 and php71
+php_version: php71

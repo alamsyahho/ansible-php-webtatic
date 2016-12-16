@@ -13,7 +13,9 @@ CentOS 6/7 Minimal Installation
 `install-php-webtatic.yml`
 
     - hosts: all
-      remote_user: root
+      vars:
+        php_version: php56
+        
       roles:
         - php-webtatic
 

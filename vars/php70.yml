@@ -9,7 +9,6 @@ __php_packages:
   - php70w-tidy
   - php70w-mysql
   - php70w-gd
-  - php70w-pecl-geoip
   - php70w-imap
   - php70w-mbstring
   - php70w-odbc

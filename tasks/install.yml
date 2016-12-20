@@ -15,14 +15,32 @@
   with_items:
     - "{{ php_packages }}"
 
+- name: check igbinary module
+  shell: php -m | grep -i igbinary
+  register: igbinary_exist
+  changed_when: false
+  failed_when: false
+  no_log: true
+  when:
+    - php_version != 'php56'
+
+- include: igbinary-php7.yml
+  static: false
+  when:
+    - igbinary_exist.rc == 1
+    - php_version != 'php56'
+
 - name: check memcached module
   shell: php -m | grep -i memcached
   register: memcached_exist
   changed_when: false
   failed_when: false
   no_log: true
+  when:
+    - php_version != 'php56'
 
 - include: memcached-php7.yml
   static: false
   when:
     - memcached_exist.rc == 1
+    - php_version != 'php56'

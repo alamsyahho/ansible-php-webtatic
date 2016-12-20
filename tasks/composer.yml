@@ -8,7 +8,7 @@
 - name: install composer
   shell: cat /tmp/installer | php -- --install-dir=/usr/local/bin
   args:
-    creates: /usr/local/bin/composer.phar
+    creates: /usr/local/bin/composer
   tags: composer
 
 - name: rename composer.phar to composer

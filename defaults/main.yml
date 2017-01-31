@@ -1,3 +1,10 @@
 ---
 # php version. currently only support: php56, php70 and php71
-php_version: php71
+php_version: php70
+
+# php.ini config
+max_execution_time: 300
+memory_limit: 512M
+upload_max_filesize: 16M
+post_max_size: 16M
+timezone: UTC

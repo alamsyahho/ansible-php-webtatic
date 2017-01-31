@@ -1,8 +1,14 @@
 ---
+__enable_repo: webtatic
+
 __php_packages:
   - httpd
   - mod_ssl
   - php56w
+  - php56w-common
+  - php56w-pdo
+  - php56w-process
+  - php56w-cli
   - php56w-bcmath
   - php56w-mcrypt
   - php56w-tidy

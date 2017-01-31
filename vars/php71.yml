@@ -1,8 +1,14 @@
 ---
+__enable_repo: webtatic-testing
+
 __php_packages:
   - httpd
   - mod_ssl
   - php71w
+  - php71w-common
+  - php71w-pdo
+  - php71w-process
+  - php71w-cli
   - php71w-devel
   - php71w-bcmath
   - php71w-mcrypt

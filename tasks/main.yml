@@ -5,9 +5,10 @@
 - name: include php specific variables
   include_vars: "{{ php_version }}.yml"
 
-- name: define php packages
+- name: define php variables
   set_fact:
     php_packages: "{{ __php_packages | list }}"
+    enable_repo: "{{ __enable_repo }}"
 
 - name: define repo url for epel and webtatic
   set_fact:

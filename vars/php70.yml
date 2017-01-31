@@ -1,8 +1,14 @@
 ---
+__enable_repo: webtatic
+
 __php_packages:
   - httpd
   - mod_ssl
   - php70w
+  - php70w-common
+  - php70w-pdo
+  - php70w-process
+  - php70w-cli
   - php70w-devel
   - php70w-bcmath
   - php70w-mcrypt
@@ -20,3 +26,4 @@ __php_packages:
   - php70w-pecl-apcu
   - php70w-pecl-imagick
   - php70w-fpm
+  - php70w-opcache

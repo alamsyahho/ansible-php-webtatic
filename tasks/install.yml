@@ -11,7 +11,7 @@
   yum:
     name: "{{ item }}"
     state: present
-    enablerepo: webtatic-testing
+    enablerepo: "{{ enable_repo }}"
   with_items:
     - "{{ php_packages }}"
 
@@ -22,7 +22,7 @@
   failed_when: false
   no_log: true
 
-- include: igbinary-php7.yml
+- include: php7-igbinary.yml
   static: false
   when:
     - igbinary_exist.rc == 1
@@ -35,7 +35,7 @@
   failed_when: false
   no_log: true
 
-- include: memcached-php7.yml
+- include: php7-memcached.yml
   static: false
   when:
     - memcached_exist.rc == 1

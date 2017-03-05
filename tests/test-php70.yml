@@ -2,6 +2,8 @@
 - hosts: all
   vars:
     php_version: php70
+    __php_fpm_pool_user: apache
+    __php_fpm_pool_group: apache
 
   roles:
     - role_under_test
